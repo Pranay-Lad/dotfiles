@@ -1,0 +1,30 @@
+#! /bin/sh
+
+sxhkd &
+xrandr --output DP-2 --primary --mode 2560x1440 --rotate normal --output HDMI-0 --mode 1920x1080 --rotate normal --right-of DP-2 &
+bspc monitor DP-2 -d 1 2 3 4 5 &
+bspc monitor HDMI-0 -d 6 7 8 9 0 &
+bspc config window_gap 15 &
+
+bspc config split_ratio 0.52 &
+bspc config borderless_monocle true &
+bspc config single_monocle = true &
+bspc config gapless_monocle true &
+bspc config pointer_motion_interval 5 &
+bspc config border_width 0 &
+
+xsetroot -cursor_name left_ptr &
+
+#Autostart
+feh --bg-scale ~/Pictures/wallpaper1.jpg &
+picom --config $HOME/.config/picom/picom.conf &
+polybar Main &
+polybar workspaces &
+polybar cpu &
+polybar date &
+polybar filesystem&
+polybar memory &
+polybar now-playing &
+polybar volume &
+
+systemctl start bluetooth.service &
