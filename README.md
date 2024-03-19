@@ -4,5 +4,6 @@
 - `Editor` - Neovim
 - `Hotkeys` - SXHKD
 - `Compositor` - Picom
+- `Statusbar` - Polybar
 
-![Image Alt Text](https://github.com/Pranay-Lad/dotfiles/blob/main/Config.png)
+![Desktop](https://github.com/Pranay-Lad/dotfiles/blob/main/Config.png)
